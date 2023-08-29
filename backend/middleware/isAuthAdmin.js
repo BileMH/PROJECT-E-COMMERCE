@@ -6,6 +6,7 @@ const isAuthAdmin = async (req , res , next) => {
     try {
         // test if user has token 
         const token = req.headers["authorization"]
+        console.log(req.headers)
 
         if (!token){
         return res.status(401).send({errors: [{ msg : " Not authorized 1 !!!"}]})

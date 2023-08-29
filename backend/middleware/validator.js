@@ -2,8 +2,7 @@ const { check, validationResult } = require("express-validator")
 
 
 exports.registerValidator = () => [
-    check("firstname" , "Veuillez insérer votre prénom !").not().isEmpty(),
-    check("name" , "Veuillez insérer votre prénom !").not().isEmpty(),
+    check("FullName" , "Veuillez insérer votre prénom !").not().isEmpty(),
     check("email" , "N'est pas un e-mail").isEmail(),
     check("password" , " Entrez un mot de passe valide(Min:6)").isLength({min:6})
 
